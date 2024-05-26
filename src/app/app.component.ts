@@ -3,7 +3,7 @@ import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
-  template: `
+  template: `// ALT+96 Backtick character for template
     <hr>
     //N 1
     <button type="button" (click)="onClick()">Click</button>
@@ -31,6 +31,14 @@ import { DataService } from './data.service';
     <hr>
     //N 5
     <app-resize-listener></app-resize-listener>
+    <hr>
+    //N 7 <br>
+    {{ cost | currency }}
+
+    <hr>
+    //N 9
+    <app-parent></app-parent>
+
     `
 })
 export class AppComponent {
@@ -39,6 +47,7 @@ export class AppComponent {
   names = ['Theresa', 'Morris', 'Duane', 'Taz'];
   parentData = 'Initial data';
   showChild = true;
+  cost = '200.13';
 
   //N 3
   users: any[] = [];
