@@ -38,7 +38,7 @@ import { DataService } from './data.service';
     <hr>
     //N 9
     <app-parent></app-parent>
-
+    <div *ngIf="true">Hi<div>
     `
 })
 export class AppComponent {
